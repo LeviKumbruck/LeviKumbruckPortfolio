@@ -9,7 +9,7 @@ import ContactView from '../views/ContactView.vue';
 const routes = [
 
 
-    { path: '/', name: 'home', component: Home, meta: { title: 'Levi — Home' } },
+    { path: '/', name: 'home', component: Home, meta: { title: 'Home' } },
     { path: '/over-mij', name: 'over-mij', component: OverMij, meta: { title: 'Over mij' } },
     { path: '/stage', name: 'stage', component: Stage, meta: { title: 'Stage' } },
     { path: '/projecten', name: 'projecten', component: Projecten, meta: { title: 'Projecten' } },
@@ -24,7 +24,7 @@ const router = createRouter({
 });
 
 router.afterEach((to) => {
-  if (to.meta && to.meta.title) document.title = `${to.meta.title} — Levi`
+  if (to.meta && to.meta.title) document.title = `${to.meta.title}`
 })
 
 export default router;
