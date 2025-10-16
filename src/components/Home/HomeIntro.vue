@@ -36,7 +36,7 @@
 const hero = {
   title: 'Software Developer',
   sentence:
-    'Hey! Ik ben Levi, een full-stack developer klaar om jouw ideeën tot leven te brengen.',
+    'Welkom! Ik ben Levi, een gepassioneerde software developer met een passie voor het bouwen van efficiënte en schaalbare applicaties.',
   image: '/images/linkedin.jpg',
   status: 'Beschikbaar voor werk'
 }
