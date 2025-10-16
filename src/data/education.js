@@ -7,12 +7,7 @@ export default [
   {
     title: 'Secundair - Economie Moderne Talen',
     school: 'SJB - Zonhoven',
-    period: '2020 - 2022'
-  },
-  {
-    title: 'Secundair - Economie',
-    school: 'SJB - Zonhoven',
-    period: '2018 - 2020'
+    period: '2018 - 2022'
   },
   {
     title: 'Secundair - Moderne Wetenschappen',
