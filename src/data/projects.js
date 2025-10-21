@@ -312,7 +312,7 @@ export default [
           de <strong>Training Service</strong> voor het beheren van trainingen en dan ook nog een <strong>HR Service</strong> en <strong>DevOps Service</strong>.
           Alle communicatie tussen de microservices gebeurde asynchroon via <strong>RabbitMQ</strong>.
           Er werd gebruik gemaakt van de <strong>onion architecture</strong> om de verschillende lagen (Api, AppLogic, Domain, Infrastructure) van de applicatie te scheiden en de afhankelijkheden te beheren.
-          Ook werd er rekening gehouden worden met verschillende technische vereisten, zoals een <strong>code coverage van 100%</strong> en het gebruik van
+          Ook werd er rekening gehouden met verschillende technische vereisten, zoals een <strong>code coverage van 100%</strong> en het gebruik van
           <strong>DDD elementen</strong> zoals Entity, Value Objects en Ubiquitous Language.
           
         </p>
