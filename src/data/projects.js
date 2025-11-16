@@ -77,7 +77,7 @@ export default [
 
             <!-- Paragraphs that should wrap around the image -->
             <p class="text-white/85 leading-relaxed">
-              Er werd gekozen voor een <strong>Next.js</strong> frontend met <strong>Tailwind CSS</strong> voor snelle ontwikkeling en een moderne look. In de frontend volgde we het <strong>Atomic Design Principle</strong> om herbruikbare componenten te maken.
+              Er werd gekozen voor een <strong>Next.js + TypeScript</strong> frontend met <strong>Tailwind CSS</strong> voor snelle ontwikkeling en een moderne look. In de frontend volgde we het <strong>Atomic Design Principle</strong> om herbruikbare componenten te maken.
               De backend werd gebouwd met <strong>Java Spring Boot</strong>, gebruikmakend van <strong>REST API's</strong> en <strong>JWT</strong> voor veilige authenticatie.
               <strong>PostgreSQL</strong> diende als database voor het opslaan van alle gegevens. Voor bestanden en documenten werd <strong>AWS S3</strong> gebruikt.
             </p>
@@ -108,6 +108,124 @@ export default [
             </p>
           </div>
         </div>
+        <div class="h-px w-full bg-white/10 mb-10"></div>
+
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Codevoorbeelden: frontend</h2>
+
+        <h3 class="text-xl font-semibold tracking-tight mb-4">Mappenstructuur</h3>
+
+        <!-- Screenshot + tekst naast elkaar -->
+        <div class="flex flex-col lg:flex-row items-start gap-8">
+
+          <!-- Screenshot -->
+          <figure class="relative rounded-2xl overflow-hidden border border-white/10 w-full  lg:max-w-xl shrink-0">
+            <img src="/projects/blues5.png" alt="Mappenstructuur" class="w-full object-contain" />
+          </figure>
+
+          <!-- Tekst -->
+          <div class="text-white/85 leading-relaxed max-w-3xl">
+
+            <p>
+              De frontend van dit project is ontwikkeld met <strong>Next.js</strong> en <strong>TypeScript</strong>.
+              Voor de vormgeving werd gebruikgemaakt van <strong>Tailwind CSS</strong>, wat zorgt voor een snelle en consistente manier van stylen.
+              De afbeelding toont de mappenstructuur van de applicatie.
+            </p>
+
+            <br/>
+
+            <p>
+              Voor de opbouw van de componenten werd gewerkt volgens het 
+              <strong>Atomic Design Principle</strong>. Dit betekent dat de interface stap voor stap wordt opgebouwd vanuit kleine, herbruikbare bouwstenen naar volledige pagina's:
+            </p>
+
+            <ul class="list-disc ml-6 mt-3 space-y-2">
+              <li><strong>Atoms:</strong> de kleinste elementen, zoals knoppen, labels, icons en invoervelden.</li>
+              <li><strong>Molecules:</strong> combinaties van atoms die samen een functioneel blok vormen, zoals een productinfo-box.</li>
+              <li><strong>Organisms:</strong> grotere componenten die bestaan uit meerdere molecules en atoms, zoals complete productkaarten.</li>
+              <li><strong>Templates:</strong> de opmaakstructuur van volledige pagina's waarin organisms worden samengevoegd.</li>
+              <li><strong>Pages:</strong> de uiteindelijke routes in Next.js, die content tonen op basis van data en templates.</li>
+            </ul>
+
+            <br/>
+
+            <p>
+              Voor het routeren werd gebruikgemaakt van de nieuwe <strong>App Router</strong> van Next.js. 
+              Elke map binnen de <code>/app</code>-directory die een <code>page.tsx</code>-bestand bevat, wordt automatisch een route.
+              Zo wordt bijvoorbeeld <code>/app/createRequest</code> omgezet naar de <code>/createRequest</code>-route.
+              Elke <code>page.tsx</code> bevat de content en logica voor de desbetreffende route en maakt gebruik van de juiste template.
+            </p>
+
+          </div>
+        </div>
+
+        
+        
+
+        <br/>
+        <h3 class="text-xl font-semibold tracking-tight">Atoms</h3>
+        <p class="text-white/85 leading-relaxed m-0">
+          Beginnend bij de kleinste bouwstenen, de <strong>atoms</strong>. Deze componenten zijn de fundamentele elementen van de gebruikersinterface, zoals knoppen, invoervelden, labels, etc.
+          In dit voorbeeld ziet u een eenvoudige <code>RedirectButton</code> die als doel heeft om gebruikers naar een andere pagina te leiden wanneer erop wordt geklikt. 
+          De button accepteert props zoals <code>to</code> (om de doel-URL te specificeren), <code>children</code> (de inhoud van de button) en <code>className</code> (voor nog extra styling).
+        </p>
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-5xl mx-auto">
+          <img src="/projects/blues11.png" alt="Atom code" class="w-full object-cover" />
+        </figure>
+        
+
+        <br/>
+        <h3 class="text-xl font-semibold tracking-tight">Molecules</h3>
+        <p class="text-white/85 leading-relaxed">
+          Vervolgens hebben we de <strong>molecules</strong>, die bestaan uit combinaties van atoms om iets complexere functionaliteiten te bieden.
+          In dit voorbeeld ziet u een <code>ProductInfo</code> molecule die gebruikmaakt van verschillende atoms zoals <code>RedirectButton</code>, <code>ProductImage</code> en <code>Text</code>.
+        </p>
+
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-5xl mx-auto">
+          <img src="/projects/blues10.png" alt="Molecule code" class="w-full object-cover" />
+        </figure>
+
+        <br/>
+        <h3 class="text-xl font-semibold tracking-tight">Organisms</h3>
+
+        <p class="text-white/85 leading-relaxed">
+          Daarna hebben we de <strong>organisms</strong>, die bestaan uit combinaties van molecules en atoms om volledige secties van een pagina te vormen.
+          In dit voorbeeld ziet u een <code>ProductCard</code> organism die gebruikmaakt van de molecule <code>ProductInfo</code>.
+
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-5xl mx-auto">
+          <img src="/projects/blues9.png" alt="Organism code" class="w-full object-cover" />
+        </figure>
+        
+        <br/>
+        <h3 class="text-xl font-semibold tracking-tight">Templates</h3>
+        <p class="text-white/85 leading-relaxed">
+          Ten slotte hebben we de <strong>Templates</strong>, die volledige pagina's vormen door organisms te combineren.
+          In dit voorbeeld ziet u een <code>ProductTemplate</code> die gebruikmaakt van de organism <code>ProductCard</code>. 
+          Ook wordt er hier een hook <code>useProduct</code> gebruikt om productgegevens op te halen van de backend API.
+          Deze hook gebruikt de productId om de juiste gegevens op te halen, deze productId
+          Deze productgegevens worden vervolgens doorgegeven aan de <code>ProductCard</code> om de juiste informatie weer te geven.
+
+        </p>
+
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-5xl mx-auto">
+          <img src="/projects/blues8.png" alt="Template code" class="w-full object-cover" />
+        </figure>
+
+        <br/>
+        <h3 class="text-xl font-semibold tracking-tight">Page</h3>
+        <p class="text-white/85 leading-relaxed">
+          Zoals eerder vermeld, definieert de <code>page.tsx</code> file de inhoud en logica voor een specifieke route.
+          In dit voorbeeld ziet u de <code>page.tsx</code> voor de productpagina. In de page.tsx wordt de <code>ProductTemplate</code> gebruikt om de volledige pagina weer te geven.
+          De page.tsx haalt ook nog het productId op uit de URL-parameters en geeft deze door aan de template (die dan via de hook <code>useProduct</code> het juiste product ophaalt).
+        </p>
+
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-3xl mx-auto">
+          <img src="/projects/blues6.png" alt="page.tsx in map" class="w-full object-cover" />
+        </figure>
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-3xl mx-auto">
+          <img src="/projects/blues7.png" alt="page.tsx in code" class="w-full object-cover" />
+        </figure>
+        
+
 
         <!-- Divider -->
         <div class="h-px w-full bg-white/10"></div>
