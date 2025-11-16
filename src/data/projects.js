@@ -844,6 +844,82 @@ export default [
 
         <div class="h-px w-full bg-white/10"></div>
 
+        <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Codevoorbeelden: frontend</h2>
+
+        <h3 class="text-xl font-semibold tracking-tight">Mappenstructuur</h3>
+        <div class="flex items-start gap-6">
+          <figure class="relative rounded-2xl overflow-hidden border border-white/10 w-64 shrink-0">
+            <img src="/projects/newsblog6.png" alt="Frontend mappenstructuur" class="w-full object-cover" />
+          </figure>
+
+          <p class="text-white/85 leading-relaxed">
+            Zoals al was aangehaald is de frontend gemaakt in <strong>Angular 18</strong> met een duidelijke component- en servicestructuur.
+            In de screenshot ziet u de mappenstructuur van de frontend.
+
+            <br><br>
+            In de map <strong>core</strong> bevinden zich alle herbruikbare componenten. De submappen zoals 
+            <strong>comment</strong>, <strong>post</strong> en <strong>review</strong> zijn verder onderverdeeld tussen 
+            verschillende componenten die elk een eigen verantwoordelijkheid hebben. Zo bevat de map 
+            <em>comment</em> onder andere de componenten voor het toevoegen van comments, het weergeven van een lijst 
+            van comments en een individueel comment-item. Dit zorgt ervoor dat elke component klein, overzichtelijk 
+            en goed testbaar blijft.
+            <br><br>
+
+            Verder bevat de applicatie ook een <strong>guards</strong>-map met verschillende routeguards die controleren 
+            of een gebruiker toegang heeft tot bepaalde delen van de applicatie. Deze guards zorgen ervoor dat niet-ingelogde 
+            gebruikers of gebruikers zonder de juiste rol bepaalde functionaliteiten niet kunnen bereiken.
+            <br><br>
+
+            In de map <strong>shared</strong> bevinden zich alle gedeelde modellen en services die door meerdere onderdelen van de 
+            applicatie worden gebruikt. De submap <em>services</em> bevat bijvoorbeeld de verschillende services voor het 
+            ophalen en manipuleren van data via de backend API.
+            <br><br>
+
+            Alles samen vormt deze structuur een duidelijke en schaalbare opbouw, waarbij elke module logisch gegroepeerd is 
+            en de codebase eenvoudig uitbreidbaar en onderhoudbaar blijft.
+          </p>
+
+        </div>
+        </br></br>
+
+
+        <h3 class="text-xl font-semibold tracking-tight">Services</h3>
+        <p class="text-white/85 leading-relaxed">
+          In de map <strong>services</strong> bevinden zich alle services die communiceren met de backend via HTTP requests. 
+          Elke service is verantwoordelijk voor een specifiek domein, zoals <strong>AuthService</strong>, <strong>CommentService</strong> en <strong>PostService</strong>.
+          In de screenshot ziet u de <strong>CommentService</strong>. Deze service bevat methoden om comments op te halen, toe te voegen, bij te werken en te verwijderen via HTTP requests naar de backend API.
+          In deze methoden wordt gebruik gemaakt van <strong>Observables</strong> om asynchrone data streams te beheren. En pipe ik de responses om de data te transformeren indien nodig.
+          
+        </p>
+
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-3xl mx-auto">
+          <img src="/projects/newsblog8.png" alt="CommentService code" class="w-full object-cover" />
+        </figure>
+        </br></br>
+
+
+        <h3 class="text-xl font-semibold tracking-tight">Routeguards</h3>
+        <p class="text-white/85 leading-relaxed">
+          Er werd ook gebruik gemaakt van <strong>Routeguards</strong> om bijvoorbeeld te controleren of een gebruiker de juiste rol had om bepaalde pagina's te bezoeken. 
+          In dit voorbeeld ziet u een <strong>IsRedactorGuard</strong> die controleert of de gebruiker een Redactor is voordat hij toegang krijgt tot bepaalde pagina's.
+        </p>
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-3xl mx-auto">
+          <img src="/projects/newsblog7.png" alt="IsRedactorGuard" class="w-full object-cover" />
+        </figure>
+
+        <p class="text-white/85 leading-relaxed">
+          Deze routeguard wordt toegevoegd aan de routes in de <strong>app.routes.ts</strong>. 
+        </p>
+        <figure class="relative rounded-2xl overflow-hidden border border-white/10 max-w-3xl mx-auto">
+          <img src="/projects/newsblog9.png" alt="Routes configuratie" class="w-full object-cover" />
+        </figure>
+
+
+
+
+
+        <div class="h-px w-full bg-white/10"></div>
+
         <h2 class="text-2xl md:text-3xl font-bold tracking-tight">Resultaat</h2>
 
         <p class="text-white/85 leading-relaxed">
