@@ -31,8 +31,8 @@ onBeforeRender(({ delta, elapsed }) => {
   group.value.rotation.y = 0.4 * elapsed
 })
 
-const { state: genkModel } = useGLTF('models/genk_echt.glb')
-const { state: car } = useGLTF('models/f1.glb')
-const { state: tennis } = useGLTF('models/tennisraket.glb')
+const { state: genkModel } = useGLTF('/models/genk_echt.glb')
+const { state: car } = useGLTF('/models/f1.glb')
+const { state: tennis } = useGLTF('/models/tennisraket.glb')
 
 </script>
