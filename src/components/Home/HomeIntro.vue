@@ -21,10 +21,6 @@
              transition-transform duration-700" />
       </div>
 
-      <span
-        class="absolute -top-3 right-6 rotate-6 select-none rounded-full bg-emerald-600 text-white text-xs font-semibold px-3 py-1 shadow">
-        {{ hero.status }}
-      </span>
     </div>
 
   </div>

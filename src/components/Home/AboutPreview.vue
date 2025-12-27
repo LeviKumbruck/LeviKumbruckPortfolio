@@ -17,8 +17,6 @@
 
       <div class="mt-6 space-y-3 text-sm">
         <div class="flex items-center gap-3">
-          <span class="inline-block h-2 w-2 rounded-full bg-emerald-500"></span>
-          <span class="text-white/80">Beschikbaar voor werk</span>
         </div>
         <div class="flex items-center gap-3 text-white/70">
           <span>📍</span><span>België, Limburg</span>
