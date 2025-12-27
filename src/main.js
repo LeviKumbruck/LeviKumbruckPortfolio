@@ -5,9 +5,13 @@ import './assets/tailwind.css'
 import reveal from './directives/reveal'
 
 
-const app = createApp(App)
-    .use(router)
-    .mount('#app');
 
+const app = createApp(App)
+
+app.use(router)
+
+// ✅ register directive on the Vue app
 app.directive('reveal', reveal)
+
+app.mount('#app')
 
