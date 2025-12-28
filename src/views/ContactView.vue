@@ -40,7 +40,6 @@ const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURICompo
       <!-- PHONE -->
       <article
         class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 md:p-6 hover:bg-white/10 transition"
-        v-reveal="{ onlyOnScroll: true }"
       >
         <div class="flex items-start gap-3 sm:gap-4">
           <div class="shrink-0 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 grid place-items-center rounded-xl bg-white/10 text-lg sm:text-xl">
@@ -66,7 +65,6 @@ const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURICompo
       <!-- EMAIL -->
       <article
         class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 md:p-6 hover:bg-white/10 transition"
-        v-reveal="{ onlyOnScroll: true, delay: 80 }"
       >
         <div class="flex items-start gap-3 sm:gap-4">
           <div class="shrink-0 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 grid place-items-center rounded-xl bg-white/10 text-lg sm:text-xl">
@@ -98,7 +96,6 @@ const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURICompo
       <!-- LOCATION -->
       <article
         class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 md:p-6 hover:bg-white/10 transition"
-        v-reveal="{ onlyOnScroll: true, delay: 160 }"
       >
         <div class="flex items-start gap-3 sm:gap-4">
           <div class="shrink-0 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 grid place-items-center rounded-xl bg-white/10 text-lg sm:text-xl">
@@ -125,7 +122,6 @@ const mapUrl = `https://www.google.com/maps/search/?api=1&query=${encodeURICompo
       <!-- LINKEDIN -->
       <article
         class="rounded-2xl border border-white/10 bg-white/5 p-4 sm:p-5 md:p-6 hover:bg-white/10 transition"
-        v-reveal="{ onlyOnScroll: true, delay: 240 }"
       >
         <div class="flex items-start gap-3 sm:gap-4">
           <div class="shrink-0 h-10 w-10 sm:h-12 sm:w-12 md:h-14 md:w-14 grid place-items-center rounded-xl bg-white/10">
